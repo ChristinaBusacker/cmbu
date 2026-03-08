@@ -5,7 +5,8 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "preview": "vite preview --strictPort"
+        "preview": "vite preview --strictPort",
+        "watch": "vite build --watch"
     },
     "devDependencies": {
         "sass": "^1.77.8",

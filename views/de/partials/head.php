@@ -9,7 +9,16 @@ if ($canonicalUrl !== null) {
 
 function vite_tags(string $entry): string
 {
-    $manifestPath = __DIR__ . '/../../build/.vite/manifest.json';
+    $isDev = false; //($_ENV['VITE_DEV'] ?? getenv('VITE_DEV') ?? '') === '1';
+
+    if ($isDev) {
+        $devServer = 'http://localhost:5173';
+        return
+            '<script type="module" src="' . $devServer . '/@vite/client"></script>' . "\n" .
+            '<script type="module" src="' . $devServer . '/' . ltrim($entry, '/') . '"></script>';
+    }
+
+    $manifestPath = __DIR__ . '/../../assets/build/manifest.json';
     if (!is_file($manifestPath)) {
         return __DIR__;
     }
@@ -27,12 +36,12 @@ function vite_tags(string $entry): string
     $tags = '';
 
     foreach (($manifest[$entry]['css'] ?? []) as $cssFile) {
-        $tags .= '<link rel="stylesheet" href="/build/' . $cssFile . '">' . "\n";
+        $tags .= '<link rel="stylesheet" href="/assets/build/' . $cssFile . '">' . "\n";
     }
 
     $jsFile = $manifest[$entry]['file'] ?? null;
     if ($jsFile) {
-        $tags .= '<script type="module" src="/build/' . $jsFile . '"></script>' . "\n";
+        $tags .= '<script type="module" src="/assets/build/' . $jsFile . '"></script>' . "\n";
     }
 
     return trim($tags);

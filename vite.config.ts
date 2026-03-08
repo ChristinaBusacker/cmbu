@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/build/",
+  base: "build/",
   build: {
     manifest: true,
     outDir: "build",
@@ -11,10 +11,9 @@ export default defineConfig({
         app: "src/main.ts",
       },
       output: {
-        // keep it neat: assets/build/assets/...
-        entryFileNames: "assets/[name].[hash].js",
-        chunkFileNames: "assets/[name].[hash].js",
-        assetFileNames: "assets/[name].[hash].[ext]",
+        entryFileNames: "[name].[hash].js",
+        chunkFileNames: "[name].[hash].js",
+        assetFileNames: "[name].[hash].[ext]",
       },
     },
   },
