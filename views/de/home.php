@@ -1,20 +1,16 @@
-<section class="hero" aria-labelledby="hero-title">
+<section class="hero" id="top" aria-labelledby="hero-title">
   <div class="hero__content">
-    <p class="hero__eyebrow text-heading">Tech Lead · Softwarearchitektur · Skalierbare Plattformen</p>
-    <h1 id="hero-title">Tech Lead &amp; Softwarearchitekt für skalierbare Webplattformen</h1>
+    <p class="hero__eyebrow text-heading">Tech Lead · Webplattformen · Team Enablement</p>
+    <h1 id="hero-title">Ich mache skalierbare Webplattformen zuverlässig lieferbar.</h1>
     <p>
-      Ich entwickle und leite Teams, die komplexe Webanwendungen mit TypeScript, Angular und NestJS bauen – mit Fokus
-      auf Architektur, Wartbarkeit und langfristige Skalierbarkeit.
-    </p>
-    <p class="hero-meta">
-      Mehrjährige Erfahrung in der Entwicklung großer Webanwendungen, technischer Architektur und der Führung von
-      Entwicklerteams.
+      Architektur-Entscheidungen, die später nicht wehtun, plus Teams, die sie umsetzen können. Fokus: Developer
+      Experience, Qualität, Performance.
     </p>
     <div class="ctas">
-      <a href="/projekte" class="button" aria-label="Zur Übersichtsseite der Projekte">
+      <a href="/#projects" class="button" aria-label="Zum Projektebereich springen">
         Projekte ansehen
       </a>
-      <a href="/kontakt" class="button primary" aria-label="Zur Kontaktsektion oder Kontaktseite">
+      <a href="/#contact" class="button primary" aria-label="Zur Kontaktsektion springen">
         Kontakt aufnehmen
       </a>
     </div>
@@ -34,80 +30,76 @@
       <span class="node node--e"></span>
     </div>
     <div class="hero__photo-frame">
-      <img src="/assets/images/Selfimage-transparent.png" alt="Bild von Christina Busacker"
-        title="Selbstporträt Christina Busacker" />
+      <img src="/assets/images/Selfimage-transparent.png" alt="Bild von Christina Busacker" />
     </div>
   </div>
 </section>
 
-<section aria-labelledby="about-title">
+<section id="about" aria-labelledby="about-title">
   <h2 id="about-title">Wer ich bin</h2>
   <p>
-    Ich bin Softwareentwicklerin mit Schwerpunkt auf Architektur, Skalierbarkeit und technischer Teamführung. Mein Fokus
-    liegt auf der Entwicklung komplexer Webplattformen sowie auf der Gestaltung sauberer, wartbarer Systemarchitekturen.
+    Ich bin Softwareentwicklerin mit Fokus auf Webplattformen im Bereich E-Commerce und SaaS und arbeite seit über 10
+    Jahren an Produkt- und Plattformprojekten, sowohl im Team als auch selbstständig.
   </p>
   <p>
-    Neben der technischen Umsetzung übernehme ich häufig Verantwortung für Architekturentscheidungen, Codequalität und
-    Entwicklungsprozesse innerhalb von Teams.
+    Ich arbeite gerne an Systemen, die lange leben müssen: klare Grenzen, gute Defaults, wenig Magie. In Teams
+    fokussiere ich auf Enablement: gute Reviews, nachvollziehbare Entscheidungen und Tooling, das niemand hasst.
   </p>
   <p>
-    Besonders wichtig sind mir klare Systemstrukturen, eine gute Developer Experience und langfristig wartbare Lösungen.
+    Verantwortung habe ich früh übernommen, auch ohne formalen Lead-Titel: Standards eingeführt, Refactorings
+    vorangetrieben und Observability über OpenTelemetry aufgebaut, damit Probleme schneller gefunden und Releases
+    verlässlicher werden.
   </p>
 </section>
 
-<section aria-labelledby="skills-title">
-  <h2 id="skills-title">Kompetenzen</h2>
+<section id="skills" aria-labelledby="skills-title">
+  <h2 id="skills-title">Was ich liefere</h2>
   <div class="grid">
-    <article class="card" aria-labelledby="skills-leadership-title">
-      <h3 id="skills-leadership-title">Technische Führung</h3>
+    <article class="card">
+      <h3>Team Enablement</h3>
+      <p>Ich bringe Teams in eine Arbeitsweise, die dauerhaft liefert.</p>
       <ul>
-        <li>Architektur komplexer Websysteme</li>
-        <li>Technische Entscheidungsfindung</li>
-        <li>Code-Reviews und Qualitätsstandards</li>
-        <li>Mentoring von Entwicklerinnen und Entwicklern</li>
-        <li>Planung technischer Roadmaps</li>
+        <li>Reviews, Standards, Mentoring</li>
+        <li>DX: Tooling, Build-/Test-Setup, klare Defaults</li>
+        <li>Technische Entscheidungen nachvollziehbar dokumentiert</li>
       </ul>
     </article>
 
-    <article class="card" aria-labelledby="skills-dev-title">
-      <h3 id="skills-dev-title">Softwareentwicklung</h3>
+    <article class="card">
+      <h3>Plattform-Architektur</h3>
+      <p>Strukturen, die skalieren, ohne dass jede Änderung weh tut.</p>
       <ul>
-        <li>TypeScript</li>
-        <li>Angular</li>
-        <li>NestJS</li>
-        <li>Node.js</li>
-        <li>REST APIs</li>
-        <li>Server-Side Rendering</li>
+        <li>Modulare Architektur, klare Boundaries</li>
+        <li>API-Design, Versionierung, Migrationsstrategien</li>
+        <li>Monorepo/Nx, wiederverwendbare Libraries</li>
       </ul>
     </article>
 
-    <article class="card" aria-labelledby="skills-architecture-title">
-      <h3 id="skills-architecture-title">Architektur &amp; Plattformen</h3>
+    <article class="card">
+      <h3>Qualität & Observability</h3>
+      <p>Probleme werden früh sichtbar und Releases bleiben kontrollierbar.</p>
       <ul>
-        <li>Modulare Systemarchitektur</li>
-        <li>Nx Monorepos</li>
-        <li>Skalierbare Backend-Strukturen</li>
-        <li>CMS-Architekturen</li>
-        <li>API-Design</li>
+        <li>OpenTelemetry Tracing, Logging, Monitoring</li>
+        <li>Teststrategie und CI/CD als “Default”, nicht als Projekt</li>
+        <li>Performance-Budgets und pragmatische Optimierung</li>
       </ul>
     </article>
 
-    <article class="card" aria-labelledby="skills-infra-title">
-      <h3 id="skills-infra-title">Infrastruktur &amp; Qualität</h3>
+    <article class="card">
+      <h3>Stack (Auswahl)</h3>
       <ul>
-        <li>Observability mit OpenTelemetry</li>
-        <li>Logging &amp; Monitoring</li>
-        <li>CI/CD-Pipelines</li>
-        <li>Containerisierte Deployments</li>
+        <li>TypeScript · Angular · NestJS · Node.js</li>
+        <li>SSR · REST · SSE · TypeORM</li>
+        <li>Docker · Pipelines · Deployments</li>
       </ul>
     </article>
   </div>
 </section>
 
-<section aria-labelledby="projects-title">
+<section id="projects" aria-labelledby="projects-title">
   <h2 id="projects-title">Projekte</h2>
 
-  <article class="project-card" aria-labelledby="project-solarsystem-title">
+  <article class="project-card" id="project-solarsystem" aria-labelledby="project-solarsystem-title">
     <h3 id="project-solarsystem-title">SolarSystem</h3>
     <p class="subline">WebGL-basierter Solar-System-Renderer</p>
     <p>
@@ -141,7 +133,7 @@
     </a>
   </article>
 
-  <article class="project-card" aria-labelledby="project-lmstudio-title">
+  <article class="project-card" id="project-lmstudio" aria-labelledby="project-lmstudio-title">
     <h3 id="project-lmstudio-title">LMstudio-web</h3>
     <p class="subline">Eine Local-First-LAN-Anwendung auf Basis von LM Studio</p>
     <p>
@@ -176,7 +168,7 @@
     </a>
   </article>
 
-  <article class="project-card" aria-labelledby="project-editron-title">
+  <article class="project-card" id="project-editron" aria-labelledby="project-editron-title">
     <h3 id="project-editron-title">Editron CMS</h3>
     <p class="subline">Modulares CMS-System für flexible Webplattformen</p>
     <p>
@@ -211,57 +203,43 @@
   </article>
 </section>
 
-<section aria-labelledby="workflow-title">
+<section id="workflow" aria-labelledby="workflow-title">
   <h2 id="workflow-title">Arbeitsweise</h2>
 
   <div class="grid">
-    <article class="card" aria-labelledby="workflow-architecture-title">
-      <h3 id="workflow-architecture-title">Architektur</h3>
-      <p>
-        Ich lege großen Wert auf klare Systemarchitektur, die langfristig wartbar und erweiterbar bleibt.
-        Architekturentscheidungen werden so getroffen, dass sie sowohl technische Anforderungen als auch Teamstrukturen
-        unterstützen.
-      </p>
+    <article class="card">
+      <h3>1. Ziel & Constraints</h3>
+      <p>Ich kläre Scope, Risiken und was “fertig” bedeutet, bevor wir Architektur diskutieren.</p>
     </article>
 
-    <article class="card" aria-labelledby="workflow-quality-title">
-      <h3 id="workflow-quality-title">Codequalität</h3>
-      <p>
-        Sauberer Code, klare Standards und strukturierte Code-Reviews sind entscheidend für nachhaltige
-        Softwareentwicklung.
-      </p>
+    <article class="card">
+      <h3>2. Entscheidungen, die man wiederfindet</h3>
+      <p>Trade-offs kurz dokumentiert, damit das Team später nicht dieselbe Debatte wiederholt.</p>
     </article>
 
-    <article class="card" aria-labelledby="workflow-collaboration-title">
-      <h3 id="workflow-collaboration-title">Zusammenarbeit</h3>
-      <p>
-        Ich arbeite eng mit Entwicklerteams zusammen, unterstütze bei Architekturentscheidungen und fördere den
-        Austausch technischer Ideen im Team.
-      </p>
+    <article class="card">
+      <h3>3. Enablement statt Heldentum</h3>
+      <p>Standards, Reviews und Tooling so, dass das Team ohne Bottleneck liefern kann.</p>
     </article>
 
-    <article class="card" aria-labelledby="workflow-scalability-title">
-      <h3 id="workflow-scalability-title">Skalierbarkeit</h3>
-      <p>
-        Systeme werden so entworfen, dass sie auch bei steigenden Anforderungen stabil und wartbar bleiben.
-      </p>
+    <article class="card">
+      <h3>4. Betrieb als Teil des Produkts</h3>
+      <p>Tracing, Logs und Tests sind kein “später”, sondern Voraussetzung für verlässliche Releases.</p>
     </article>
   </div>
 </section>
 
-<section aria-labelledby="principles-title">
+<section id="principles" aria-labelledby="principles-title">
   <h2 id="principles-title">Technische Prinzipien</h2>
   <p>Einige Grundprinzipien, die meine Arbeit prägen:</p>
   <ul>
-    <li>Einfache Lösungen sind oft die besten Lösungen</li>
-    <li>Architektur muss Teams unterstützen, nicht nur Code</li>
-    <li>Beobachtbarkeit ist Teil des Produkts</li>
-    <li>Developer Experience beeinflusst Produktivität direkt</li>
-    <li>Verbindliche Commitments sind wichtiger als unverbindliche Versprechen</li>
+    <li>Boring Tech, solange kein messbarer Gewinn dagegen spricht.</li>
+    <li>Beobachtbarkeit ist Teil des Produkts.</li>
+    <li>Verbindliche Commitments sind wichtiger als unverbindliche Versprechen.</li>
   </ul>
 </section>
 
-<section aria-labelledby="contact-title">
+<section id="contact" aria-labelledby="contact-title">
   <h2 id="contact-title">Kontakt</h2>
   <p>
     Ich bin offen für Positionen im Bereich technische Leitung, Softwarearchitektur sowie für ausgewählte

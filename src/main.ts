@@ -1,12 +1,34 @@
 import "./styles/app.scss";
 
-const burger = document.querySelector(".burger");
+const header = document.querySelector<HTMLElement>(".site-header");
+const burger = document.querySelector<HTMLButtonElement>(".burger");
+const nav = document.querySelector<HTMLElement>(".site-nav");
+const navLinks = document.querySelectorAll<HTMLAnchorElement>(".site-nav a");
 
-if (burger) {
+const closeMenu = () => {
+  if (!header || !burger) return;
+
+  burger.classList.remove("active");
+  burger.setAttribute("aria-expanded", "false");
+  header.classList.remove("nav-open");
+};
+
+if (header && burger && nav) {
   burger.addEventListener("click", () => {
-    burger.classList.toggle("active");
+    const isOpen = burger.classList.toggle("active");
+    burger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    header.classList.toggle("nav-open", isOpen);
+  });
 
-    const expanded = burger.classList.contains("active");
-    burger.setAttribute("aria-expanded", expanded ? "true" : "false");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      closeMenu();
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMenu();
+    }
   });
 }

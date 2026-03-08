@@ -1,4 +1,4 @@
-<section class="hero" aria-labelledby="hero-title">
+<section class="hero" id="top" aria-labelledby="hero-title">
   <div class="hero__content">
     <p class="hero__eyebrow text-heading">Tech Lead · Software Architecture · Scalable Platforms</p>
     <h1 id="hero-title">Tech Lead &amp; Software Architect for Scalable Web Platforms</h1>
@@ -10,11 +10,16 @@
       Several years of experience in building large web applications, designing technical architectures, and leading
       development teams.
     </p>
+    <ul class="hero__pills" aria-label="Core areas">
+      <li>Architecture</li>
+      <li>Technical Leadership</li>
+      <li>Developer Experience</li>
+    </ul>
     <div class="ctas">
-      <a href="/projects" class="button" aria-label="Go to the projects overview page">
+      <a href="/en/#projects" class="button" aria-label="Jump to the projects section">
         View Projects
       </a>
-      <a href="/contact" class="button primary" aria-label="Go to the contact section or contact page">
+      <a href="/en/#contact" class="button primary" aria-label="Jump to the contact section">
         Get in Touch
       </a>
     </div>
@@ -40,7 +45,7 @@
   </div>
 </section>
 
-<section aria-labelledby="about-title">
+<section id="about" aria-labelledby="about-title">
   <h2 id="about-title">Who I Am</h2>
   <p>
     I am a software engineer focused on architecture, scalability, and technical leadership. My work centers on building
@@ -55,7 +60,7 @@
   </p>
 </section>
 
-<section aria-labelledby="skills-title">
+<section id="skills" aria-labelledby="skills-title">
   <h2 id="skills-title">Core Competencies</h2>
   <div class="grid">
     <article class="card" aria-labelledby="skills-leadership-title">
@@ -104,10 +109,10 @@
   </div>
 </section>
 
-<section aria-labelledby="projects-title">
+<section id="projects" aria-labelledby="projects-title">
   <h2 id="projects-title">Projects</h2>
 
-  <article class="project-card" aria-labelledby="project-solarsystem-title">
+  <article class="project-card" id="project-solarsystem" aria-labelledby="project-solarsystem-title">
     <h3 id="project-solarsystem-title">SolarSystem</h3>
     <p class="subline">WebGL-based solar system renderer</p>
     <p>
@@ -140,7 +145,7 @@
     </a>
   </article>
 
-  <article class="project-card" aria-labelledby="project-lmstudio-title">
+  <article class="project-card" id="project-lmstudio" aria-labelledby="project-lmstudio-title">
     <h3 id="project-lmstudio-title">LMstudio-web</h3>
     <p class="subline">A local-first LAN application built on top of LM Studio</p>
     <p>
@@ -175,7 +180,7 @@
     </a>
   </article>
 
-  <article class="project-card" aria-labelledby="project-editron-title">
+  <article class="project-card" id="project-editron" aria-labelledby="project-editron-title">
     <h3 id="project-editron-title">Editron CMS</h3>
     <p class="subline">A modular CMS for flexible web platforms</p>
     <p>
@@ -210,7 +215,7 @@
   </article>
 </section>
 
-<section aria-labelledby="workflow-title">
+<section id="workflow" aria-labelledby="workflow-title">
   <h2 id="workflow-title">How I Work</h2>
 
   <div class="grid">
@@ -246,7 +251,7 @@
   </div>
 </section>
 
-<section aria-labelledby="principles-title">
+<section id="principles" aria-labelledby="principles-title">
   <h2 id="principles-title">Technical Principles</h2>
   <p>Some of the principles that shape how I work:</p>
   <ul>
@@ -258,7 +263,7 @@
   </ul>
 </section>
 
-<section aria-labelledby="contact-title">
+<section id="contact" aria-labelledby="contact-title">
   <h2 id="contact-title">Contact</h2>
   <p>
     I am open to roles in technical leadership, software architecture, and selected consulting projects.
