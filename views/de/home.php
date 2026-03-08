@@ -1,10 +1,10 @@
 <section class="hero" aria-labelledby="hero-title">
-  <div>
+  <div class="hero__content">
+    <p class="hero__eyebrow text-heading">Tech Lead · Softwarearchitektur · Skalierbare Plattformen</p>
     <h1 id="hero-title">Tech Lead &amp; Softwarearchitekt für skalierbare Webplattformen</h1>
     <p>
       Ich entwickle und leite Teams, die komplexe Webanwendungen mit TypeScript, Angular und NestJS bauen – mit Fokus
-      auf
-      Architektur, Wartbarkeit und langfristige Skalierbarkeit.
+      auf Architektur, Wartbarkeit und langfristige Skalierbarkeit.
     </p>
     <p class="hero-meta">
       Mehrjährige Erfahrung in der Entwicklung großer Webanwendungen, technischer Architektur und der Führung von
@@ -17,13 +17,26 @@
       <a href="/kontakt" class="button primary" aria-label="Zur Kontaktsektion oder Kontaktseite">
         Kontakt aufnehmen
       </a>
-      <button>Test</button>
     </div>
-
   </div>
-  <div>
-    <img src="/assets/images/selfimage-rosa-bg.png" alt="Bild von Christina Busacker"
-      title="Selbstporträt Christina Busacker" />
+
+  <div class="hero__visual" aria-hidden="true">
+    <div class="hero__diagram">
+      <span class="line line--a"></span>
+      <span class="line line--b"></span>
+      <span class="line line--c"></span>
+      <span class="line line--d"></span>
+      <span class="line line--e"></span>
+      <span class="node node--a"></span>
+      <span class="node node--b"></span>
+      <span class="node node--c"></span>
+      <span class="node node--d"></span>
+      <span class="node node--e"></span>
+    </div>
+    <div class="hero__photo-frame">
+      <img src="/assets/images/Selfimage-transparent.png" alt="Bild von Christina Busacker"
+        title="Selbstporträt Christina Busacker" />
+    </div>
   </div>
 </section>
 
@@ -223,8 +236,7 @@
       <h3 id="workflow-collaboration-title">Zusammenarbeit</h3>
       <p>
         Ich arbeite eng mit Entwicklerteams zusammen, unterstütze bei Architekturentscheidungen und fördere den
-        Austausch
-        technischer Ideen im Team.
+        Austausch technischer Ideen im Team.
       </p>
     </article>
 
@@ -257,14 +269,14 @@
   </p>
 
   <div class="contact-grid">
-    <section aria-labelledby="contact-form-title">
+    <section class="card" aria-labelledby="contact-form-title">
       <h3 id="contact-form-title">Kontaktformular</h3>
       <form aria-label="Kontaktformular">
         <!-- Kontaktformular folgt -->
       </form>
     </section>
 
-    <section aria-labelledby="contact-other-title">
+    <section class="card" aria-labelledby="contact-other-title">
       <h3 id="contact-other-title">Weitere Kontaktwege</h3>
       <address>
         <ul>

@@ -1,5 +1,6 @@
 <section class="hero" aria-labelledby="hero-title">
-  <div>
+  <div class="hero__content">
+    <p class="hero__eyebrow text-heading">Tech Lead · Software Architecture · Scalable Platforms</p>
     <h1 id="hero-title">Tech Lead &amp; Software Architect for Scalable Web Platforms</h1>
     <p>
       I build and lead teams that create complex web applications with TypeScript, Angular, and NestJS, with a strong
@@ -19,9 +20,23 @@
     </div>
   </div>
 
-  <div>
-    <img src="/assets/images/selfimage-rosa-bg.png" alt="Bild von Christina Busacker"
-      title="Selbstporträt Christina Busacker" />
+  <div class="hero__visual" aria-hidden="true">
+    <div class="hero__diagram">
+      <span class="line line--a"></span>
+      <span class="line line--b"></span>
+      <span class="line line--c"></span>
+      <span class="line line--d"></span>
+      <span class="line line--e"></span>
+      <span class="node node--a"></span>
+      <span class="node node--b"></span>
+      <span class="node node--c"></span>
+      <span class="node node--d"></span>
+      <span class="node node--e"></span>
+    </div>
+    <div class="hero__photo-frame">
+      <img src="/assets/images/Selfimage-transparent.png" alt="Portrait of Christina Busacker"
+        title="Portrait of Christina Busacker" />
+    </div>
   </div>
 </section>
 
@@ -36,8 +51,7 @@
     development processes within teams.
   </p>
   <p>
-    Clear system structures, a strong developer experience, and long-term maintainability are especially important to
-    me.
+    Clear system structures, a strong developer experience, and long-term maintainability are especially important to me.
   </p>
 </section>
 
@@ -251,14 +265,14 @@
   </p>
 
   <div class="contact-grid">
-    <section aria-labelledby="contact-form-title">
+    <section class="card" aria-labelledby="contact-form-title">
       <h3 id="contact-form-title">Contact Form</h3>
       <form aria-label="Contact form">
         <!-- Contact form coming soon -->
       </form>
     </section>
 
-    <section aria-labelledby="contact-other-title">
+    <section class="card" aria-labelledby="contact-other-title">
       <h3 id="contact-other-title">Other Ways to Reach Me</h3>
       <address>
         <ul>
