@@ -7,10 +7,10 @@ a.button,
   min-height: 3rem;
   padding: 0.82rem 1.15rem;
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.82);
   margin: 0;
   border: 1px solid rgba(25, 21, 22, 0.12);
-  border-radius: 0.85rem;
+  border-radius: 0.9rem;
   text-align: center;
   line-height: 1.15;
   color: var(--text-color);
@@ -18,7 +18,7 @@ a.button,
   font-weight: 600;
   letter-spacing: -0.01em;
   cursor: pointer;
-  box-shadow: 0 12px 24px rgba(39, 23, 24, 0.05);
+  box-shadow: 0 8px 18px rgba(39, 23, 24, 0.05);
   transition:
     transform 0.2s ease,
     background-color 0.2s ease,
@@ -27,9 +27,9 @@ a.button,
     color 0.2s ease;
 
   &:hover {
-    background-color: rgba(22, 22, 22, 0.05);
+    background-color: rgba(22, 22, 22, 0.04);
     transform: translateY(-1px);
-    box-shadow: 0 16px 28px rgba(39, 23, 24, 0.08);
+    box-shadow: 0 12px 24px rgba(39, 23, 24, 0.08);
   }
 
   &:focus-visible {
@@ -41,10 +41,12 @@ a.button,
     background: linear-gradient(180deg, var(--accent), var(--accent-deep));
     color: white;
     border-color: transparent;
+    box-shadow: 0 10px 22px rgba(212, 116, 121, 0.22);
 
     &:hover {
       background: linear-gradient(180deg, #c96d73, #b55d64);
       color: white;
+      box-shadow: 0 14px 28px rgba(212, 116, 121, 0.28);
     }
   }
 
