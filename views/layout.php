@@ -8,7 +8,7 @@
 <body>
   <?php require __DIR__ . '/' . $currentLang . '/partials/header.php'; ?>
 
-  <main>
+  <main id="main-content">
     <?= $content ?>
   </main>
 

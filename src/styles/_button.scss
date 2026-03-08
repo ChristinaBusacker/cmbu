@@ -1,0 +1,25 @@
+button,
+a.button {
+  text-decoration: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 20px;
+  color: black;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: rgba(22, 22, 22, 0.1);
+  }
+
+  &.primary {
+    background-color: #d47479;
+    color: white;
+    border-color: #d47479;
+  }
+}
