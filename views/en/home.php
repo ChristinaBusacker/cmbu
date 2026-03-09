@@ -98,7 +98,7 @@
 <section id="projects" aria-labelledby="projects-title">
   <h2 id="projects-title">Projects</h2>
 
-  <article class="project-card" id="project-solarsystem" aria-labelledby="project-solarsystem-title">
+  <article class="project-card" id="project-solarsystem" aria-labelledby="project-solarsystem-title" style="view-transition-name: project-solarsystem;">
     <div class="project-card__content">
       <div>
         <div class="project-card__header">
@@ -150,7 +150,7 @@
     </a>
   </article>
 
-  <article class="project-card" id="project-lmstudio" aria-labelledby="project-lmstudio-title">
+  <article class="project-card" id="project-lmstudio" aria-labelledby="project-lmstudio-title" style="view-transition-name: project-lmstudio;">
     <div class="project-card__content">
       <div>
         <div class="project-card__header">

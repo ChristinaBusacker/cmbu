@@ -4,7 +4,7 @@ $pageDescription = 'Local-first Web UI für LM Studio: LAN-zugänglich, determin
 $pageCanonical = '/projects/lmstudio-web';
 ?>
 
-<section class="project-detail" aria-labelledby="project-title">
+<section class="project-detail" aria-labelledby="project-title" style="view-transition-name: project-lmstudio;">
   <header class="project-detail__hero">
     <div class="project-detail__intro">
       <p class="project-detail__kicker">Angular · NestJS · SQLite · SSE</p>

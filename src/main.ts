@@ -1,3 +1,4 @@
 import "./styles/app.scss";
 import "./ts/menu";
-import "./ts/contact-form.ts";
+import "./ts/contact-form";
+import "./ts/view-transitions";

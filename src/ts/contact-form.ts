@@ -1,8 +1,17 @@
-const contactForm = document.querySelector<HTMLFormElement>("#contact-form");
-const contactFeedback =
-  document.querySelector<HTMLElement>("#contact-feedback");
+let isInitialized = false;
 
-function setFeedback(type: "success" | "error", message: string) {
+function getEls() {
+  const contactForm = document.querySelector<HTMLFormElement>("#contact-form");
+  const contactFeedback =
+    document.querySelector<HTMLElement>("#contact-feedback");
+  return { contactForm, contactFeedback };
+}
+
+function setFeedback(
+  contactFeedback: HTMLElement | null,
+  type: "success" | "error",
+  message: string,
+) {
   if (!contactFeedback) return;
   contactFeedback.hidden = false;
   contactFeedback.classList.remove(
@@ -52,7 +61,10 @@ function setFieldError(
   if (row) row.appendChild(p);
 }
 
-async function submitContactAjax(form: HTMLFormElement) {
+async function submitContactAjax(
+  form: HTMLFormElement,
+  contactFeedback: HTMLElement | null,
+) {
   const submitButton = form.querySelector<HTMLButtonElement>(
     "button[type='submit']",
   );
@@ -80,12 +92,16 @@ async function submitContactAjax(form: HTMLFormElement) {
     };
 
     if (data.ok) {
-      setFeedback("success", data.message);
+      setFeedback(contactFeedback, "success", data.message);
       form.reset();
       return;
     }
 
-    setFeedback("error", data.message || "Bitte prüfe das Formular.");
+    setFeedback(
+      contactFeedback,
+      "error",
+      data.message || "Bitte prüfe das Formular.",
+    );
 
     const errors = data.errors || {};
     const entries = Object.entries(errors);
@@ -106,9 +122,24 @@ async function submitContactAjax(form: HTMLFormElement) {
   }
 }
 
-if (contactForm) {
+/**
+ * Initializes the contact form AJAX handler (idempotent).
+ * Call this after DOM swaps (e.g. ViewTransition navigation).
+ */
+export function initContactForm(): void {
+  const { contactForm, contactFeedback } = getEls();
+  if (!contactForm) return;
+
+  if (contactForm.dataset.ajaxBound === "true") return;
+  contactForm.dataset.ajaxBound = "true";
+
   contactForm.addEventListener("submit", (ev) => {
     ev.preventDefault();
-    submitContactAjax(contactForm);
+    submitContactAjax(contactForm, contactFeedback);
   });
+}
+
+if (!isInitialized) {
+  isInitialized = true;
+  initContactForm();
 }
