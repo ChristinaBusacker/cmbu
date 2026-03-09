@@ -50,6 +50,23 @@ a.button,
     }
   }
 
+  &.github {
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: whitesmoke;
+    & img {
+      width: 24px;
+    }
+  }
+
+  &.ghost {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
   &.is-disabled,
   &[aria-disabled="true"] {
     pointer-events: none;

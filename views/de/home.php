@@ -147,7 +147,7 @@
       </section>
     </div>
 
-    <a href="/projekte/solarsystem" class="button" aria-label="Projektseite SolarSystem ansehen">
+    <a href="/projects/solarsystem" class="button" aria-label="Projektseite SolarSystem ansehen">
       Projekt ansehen
     </a>
   </article>
@@ -204,7 +204,7 @@
       </section>
     </div>
 
-    <a href="/projekte/lmstudio-web" class="button" aria-label="Projektseite LMstudio-web ansehen">
+    <a href="/projects/lmstudio-web" class="button" aria-label="Projektseite LMstudio-web ansehen">
       Projekt ansehen
     </a>
   </article>
