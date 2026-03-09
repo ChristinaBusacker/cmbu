@@ -5,7 +5,8 @@
             <a href="/en">Home</a>
             <a href="/en/#projects">Projects</a>
             <a href="/en/#contact">Contact</a>
-            <a href="/privacy">Privacy</a>
+            <a href="/en/imprint">Legal Notice</a>
+            <a href="/en/privacy">Privacy</a>
         </nav>
     </div>
 </footer>

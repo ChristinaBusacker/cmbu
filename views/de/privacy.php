@@ -1,6 +1,6 @@
 <?php
-  $pageTitle = 'Datenschutzerklärung';
-  $pageDescription = 'Informationen zur Verarbeitung personenbezogener Daten auf dieser Website.';
+$pageTitle = 'Datenschutzerklärung';
+$pageDescription = 'Informationen zur Verarbeitung personenbezogener Daten auf dieser Website.';
 ?>
 
 <section aria-labelledby="privacy-title">
@@ -18,9 +18,11 @@
   </p>
   <ul>
     <li><strong>Zweck</strong>: Beantwortung von Anfragen</li>
-    <li><strong>Rechtsgrundlage</strong>: Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)</li>
-    <li><strong>Empfänger</strong>: Keine Weitergabe an Dritte; Versand per E‑Mail an mich</li>
-    <li><strong>Speicherdauer</strong>: So lange wie für die Bearbeitung erforderlich bzw. solange gesetzliche Pflichten bestehen</li>
+    <li><strong>Rechtsgrundlage</strong>: Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) bzw. Art. 6 Abs. 1 lit.
+      f DSGVO (berechtigtes Interesse)</li>
+    <li><strong>Empfänger</strong>: Keine Weitergabe an Dritte; Versand per E-Mail an mich</li>
+    <li><strong>Speicherdauer</strong>: So lange wie für die Bearbeitung erforderlich bzw. solange gesetzliche Pflichten
+      bestehen</li>
   </ul>
 
   <h2>Deine Rechte</h2>
@@ -33,7 +35,7 @@
   <h2>Verantwortliche Stelle</h2>
   <p>
     Christina Busacker<br>
-    E‑Mail: <a href="mailto:email@christina-busacker.de">email@christina-busacker.de</a>
+    E-Mail: <a href="mailto:email@christina-busacker.de">email@christina-busacker.de</a>
   </p>
 
   <p class="form-hint">
