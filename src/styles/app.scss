@@ -12,12 +12,12 @@
    * - Fewer heavy boxes, more typographic layout
    * - Subtle borders, very light shadows
    */
-  --page-bg: #f6f2f1;
+  --page-bg: #f7f4f3;
   --surface: rgba(255, 255, 255, 0.7);
   --surface-strong: rgba(255, 255, 255, 0.88);
   --surface-soft: #fbf7f6;
   --text-color: #191516;
-  --muted: #5c5150;
+  --muted: #4d4241;
   --line: rgba(25, 21, 22, 0.1);
   --line-strong: rgba(25, 21, 22, 0.16);
   --shadow-soft: 0 10px 22px rgba(39, 23, 24, 0.05);
@@ -32,7 +32,11 @@ html {
 
 body {
   background:
-    radial-gradient(circle at top left, rgba(212, 116, 121, 0.085), transparent 24%),
+    radial-gradient(
+      circle at top left,
+      rgba(212, 116, 121, 0.085),
+      transparent 24%
+    ),
     linear-gradient(180deg, #fbf8f7 0%, var(--page-bg) 26rem, #faf7f6 100%);
   color: var(--text-color);
 }
@@ -68,7 +72,11 @@ main > section {
       width: 1rem;
       height: 0.35rem;
       border-radius: 999px;
-      background: linear-gradient(90deg, var(--accent), rgba(212, 116, 121, 0.35));
+      background: linear-gradient(
+        90deg,
+        var(--accent),
+        rgba(212, 116, 121, 0.35)
+      );
       flex: 0 0 auto;
     }
   }
@@ -142,7 +150,11 @@ section li + li {
     position: absolute;
     inset: 0 auto 0 0;
     width: 0.26rem;
-    background: linear-gradient(180deg, rgba(212, 116, 121, 0.8), rgba(212, 116, 121, 0.18));
+    background: linear-gradient(
+      180deg,
+      rgba(212, 116, 121, 0.8),
+      rgba(212, 116, 121, 0.18)
+    );
   }
 
   & + .project-card {
@@ -176,21 +188,80 @@ section li + li {
   }
 }
 
-.card-grid {
+/* Project details (tags + thumbnails) */
+.project-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.project-card__content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+}
+
+.project-card__meta {
+  min-width: 0;
+}
+
+.project-card__thumb {
+  width: 200px;
+  aspect-ratio: 16 / 10;
+  border-radius: 0.9rem;
+  border: 1px solid var(--line);
+  background: var(--surface-soft);
+  object-fit: cover;
+  flex: 0 0 auto;
+}
+
+.project-card__thumb--contain {
+  object-fit: contain;
+  padding: 0.65rem;
+}
+
+.project-card__tags {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
   margin: 0.25rem 0 0;
+}
 
-  > section {
-    padding: 1rem 1.05rem;
-    border-radius: 0.85rem;
-    background: var(--surface-soft);
-    border: 1px solid var(--line);
+.tags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
 
-    h4 {
-      margin-bottom: 0.7rem;
-    }
+.tags li {
+  padding: 0.28rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--text-color);
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 720px) {
+  .project-card__header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-card__thumb {
+    width: 100%;
+    max-width: 26rem;
+  }
+
+  .project-card__tags {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -250,6 +321,77 @@ address a {
   }
 }
 
+.project-media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border-radius: 16px;
+}
+
+.project-media::before {
+  content: "";
+  position: absolute;
+  inset: -12px -12px -12px -12px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(25, 21, 22, 0.06);
+  z-index: 0;
+}
+
+.project-media > * {
+  position: relative;
+  z-index: 1;
+}
+
+.mockup {
+  position: absolute;
+  margin: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(25, 21, 22, 0.12);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Desktop "browser frame" feel */
+.mockup--desktop {
+  inset: 10% 12% 14% 10%;
+  border-radius: 6px;
+
+  /* Fake browser top bar */
+  &::before {
+    content: "";
+    display: block;
+    height: 12px;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.06),
+      rgba(0, 0, 0, 0.02)
+    );
+    border-bottom: 1px solid rgba(25, 21, 22, 0.08);
+  }
+
+  img {
+    height: calc(100% - 12px);
+  }
+}
+
+/* Phone overlay */
+.mockup--phone {
+  right: 8%;
+  bottom: 8%;
+  width: 26%;
+  aspect-ratio: 9 / 19.5;
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+}
+
 @media (max-width: 900px) {
   main {
     padding-inline: 1rem;
@@ -268,5 +410,9 @@ address a {
   .footer__inner {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .project-card__content {
+    display: block;
   }
 }

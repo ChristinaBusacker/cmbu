@@ -100,18 +100,37 @@
   <h2 id="projects-title">Projekte</h2>
 
   <article class="project-card" id="project-solarsystem" aria-labelledby="project-solarsystem-title">
-    <h3 id="project-solarsystem-title">SolarSystem</h3>
-    <p class="subline">WebGL-basierter Solar-System-Renderer</p>
-    <p>
-      Eine leichtgewichtige TypeScript-Anwendung auf Basis von Three.js mit realistischen Größenverhältnissen,
-      Orbitalbahnen, eigenen GLSL-Shadern, dezenten cineastischen Effekten und ergänzenden Informationen zu den
-      Planeten.
-    </p>
+    <div class="project-card__content">
+      <div>
+        <div class="project-card__header">
+          <div class="project-card__meta">
+            <h3 id="project-solarsystem-title">SolarSystem</h3>
+            <p class="subline">WebGL-basierter Solar-System-Renderer</p>
+          </div>
 
-    <div class="card-grid">
+        </div>
+
+        <p>
+          Eine leichtgewichtige TypeScript-Anwendung auf Basis von Three.js mit realistischen Größenverhältnissen,
+          Orbitalbahnen, eigenen GLSL-Shadern, dezenten cineastischen Effekten und ergänzenden Informationen zu den
+          Planeten.
+        </p>
+      </div>
+      <div class="project-media" aria-hidden="true">
+        <figure class="mockup mockup--desktop">
+          <img src="/assets/images/solar1-thumb.jpg" alt="" loading="lazy" width="1200" height="750" />
+        </figure>
+
+        <figure class="mockup mockup--phone">
+          <img src="/assets/images/solar-mobile-2-thumb.jpg" alt="" loading="lazy" width="450" height="900" />
+        </figure>
+      </div>
+    </div>
+
+    <div class="project-card__tags" aria-label="Projekt SolarSystem Details">
       <section aria-labelledby="project-solarsystem-tech-title">
         <h4 id="project-solarsystem-tech-title">Technologien</h4>
-        <ul>
+        <ul class="tags">
           <li>WebGL</li>
           <li>Three.js</li>
           <li>TypeScript</li>
@@ -120,10 +139,10 @@
 
       <section aria-labelledby="project-solarsystem-focus-title">
         <h4 id="project-solarsystem-focus-title">Schwerpunkte</h4>
-        <ul>
-          <li>Performante Implementierung</li>
-          <li>Gutes Benutzergefühl</li>
-          <li>Saubere visuelle Darstellung</li>
+        <ul class="tags">
+          <li>Performance</li>
+          <li>UX</li>
+          <li>Shader</li>
         </ul>
       </section>
     </div>
@@ -134,70 +153,58 @@
   </article>
 
   <article class="project-card" id="project-lmstudio" aria-labelledby="project-lmstudio-title">
-    <h3 id="project-lmstudio-title">LMstudio-web</h3>
-    <p class="subline">Eine Local-First-LAN-Anwendung auf Basis von LM Studio</p>
-    <p>
-      Dieses Projekt bietet eine browserbasierte Benutzeroberfläche, um LM Studio im lokalen Netzwerk komfortabel
-      zugänglich zu machen. Der Fokus liegt auf einer sauberen Systemarchitektur, Tool-Use und komplexeren Workflows.
-    </p>
 
-    <div class="card-grid">
+    <div class="project-card__content">
+      <div>
+        <div class="project-card__header">
+          <div class="project-card__meta">
+            <h3 id="project-lmstudio-title">LMstudio-web</h3>
+            <p class="subline">Eine Local-First-LAN-Anwendung auf Basis von LM Studio</p>
+          </div>
+        </div>
+
+        <p>
+          Dieses Projekt bietet eine browserbasierte Benutzeroberfläche, um LM Studio im lokalen Netzwerk komfortabel
+          zugänglich zu machen. Der Fokus liegt auf einer sauberen Systemarchitektur, Tool-Use und komplexeren
+          Workflows.
+        </p>
+      </div>
+      <div class="project-media" aria-hidden="true">
+        <figure class="mockup mockup--desktop">
+          <img src="/assets/images/lmstudio-web-2-thumb.jpg" alt="" loading="lazy" width="1200" height="750" />
+        </figure>
+
+        <figure class="mockup mockup--phone">
+          <img src="/assets/images/lmstudio-web-mobile-1-thumb.jpg" alt="" loading="lazy" width="450" height="900" />
+        </figure>
+      </div>
+    </div>
+
+
+
+    <div class="project-card__tags" aria-label="Projekt LMstudio-web Details">
       <section aria-labelledby="project-lmstudio-tech-title">
         <h4 id="project-lmstudio-tech-title">Technologien</h4>
-        <ul>
+        <ul class="tags">
           <li>Angular</li>
           <li>NestJS</li>
           <li>TypeORM</li>
-          <li>Server-Sent Events</li>
+          <li>SSE</li>
         </ul>
       </section>
 
       <section aria-labelledby="project-lmstudio-focus-title">
         <h4 id="project-lmstudio-focus-title">Schwerpunkte</h4>
-        <ul>
-          <li>Saubere Architektur</li>
-          <li>Warteschlange für Anfragen</li>
-          <li>Workflows über Node-Diagramme</li>
-          <li>LLM-Tools</li>
+        <ul class="tags">
+          <li>Queue</li>
+          <li>Node-Workflows</li>
+          <li>Tool Use</li>
+          <li>Architektur</li>
         </ul>
       </section>
     </div>
 
     <a href="/projekte/lmstudio-web" class="button" aria-label="Projektseite LMstudio-web ansehen">
-      Projekt ansehen
-    </a>
-  </article>
-
-  <article class="project-card" id="project-editron" aria-labelledby="project-editron-title">
-    <h3 id="project-editron-title">Editron CMS</h3>
-    <p class="subline">Modulares CMS-System für flexible Webplattformen</p>
-    <p>
-      Ein vollständig modular aufgebautes CMS mit Angular-Frontend und NestJS-Backend. Das System ermöglicht dynamische
-      Inhaltsstrukturen, modulare Erweiterungen und serverseitiges Rendering.
-    </p>
-
-    <div class="card-grid">
-      <section aria-labelledby="project-editron-tech-title">
-        <h4 id="project-editron-tech-title">Technologien</h4>
-        <ul>
-          <li>Angular</li>
-          <li>NestJS</li>
-          <li>Nx Monorepo</li>
-          <li>TypeORM</li>
-        </ul>
-      </section>
-
-      <section aria-labelledby="project-editron-focus-title">
-        <h4 id="project-editron-focus-title">Schwerpunkte</h4>
-        <ul>
-          <li>Modulare Architektur</li>
-          <li>Dynamisches Content-Modell</li>
-          <li>SSR-Rendering</li>
-        </ul>
-      </section>
-    </div>
-
-    <a href="/projekte/editron-cms" class="button" aria-label="Projektseite Editron CMS ansehen">
       Projekt ansehen
     </a>
   </article>
