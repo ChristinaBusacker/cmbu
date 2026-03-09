@@ -518,3 +518,75 @@ address a {
     display: block;
   }
 }
+
+/* Mobile polish (keep desktop untouched) */
+@media (max-width: 640px) {
+  main {
+    padding-inline: 0.9rem;
+  }
+
+  main > section {
+    padding: 0;
+  }
+
+  main > section > h2 {
+    margin-bottom: 0.85rem;
+  }
+
+  .card,
+  .project-card,
+  .contact-grid > section {
+    border-radius: 0.95rem;
+  }
+
+  .card {
+    padding: 1.15rem;
+  }
+
+  .card ul {
+    line-height: 1.6;
+  }
+
+  .tags {
+    gap: 0.4rem;
+  }
+
+  .tags li {
+    font-size: 0.88rem;
+    padding: 0.24rem 0.5rem;
+  }
+
+  /* Project mockups: reduce the “shift to the right” feeling */
+  .project-media::before {
+    inset: -10px;
+  }
+
+  .mockup--desktop {
+    inset: 8% 7% 16% 7%;
+  }
+
+  /* Contact: make the consent block easier to scan */
+  .checkbox-row {
+    grid-template-columns: 1.15rem 1fr;
+    gap: 0.55rem;
+  }
+
+  .form-hint {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-actions .button,
+  .form-actions button {
+    width: 100%;
+  }
+
+  .site-footer {
+    padding-bottom: 1.75rem;
+  }
+}

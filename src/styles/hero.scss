@@ -248,11 +248,33 @@ section.hero {
     margin-inline: auto;
     min-height: 24rem;
   }
+
+  /* Center the portrait for mobile/tablet layouts */
+  .hero__photo-frame {
+    padding: 0;
+    place-items: end center;
+  }
 }
 
 @media (max-width: 640px) {
+  .hero h1 {
+    font-size: clamp(2.15rem, 1.6rem + 4.2vw, 3rem);
+    line-height: 1.02;
+    max-width: 16ch;
+  }
+
   .hero__eyebrow {
-    font-size: 0.82rem;
+    font-size: 0.82rem !important;
+    padding: 0.4rem 0.65rem;
+  }
+
+  .ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ctas .button {
+    width: 100%;
   }
 
   .hero__pills {
@@ -271,7 +293,7 @@ section.hero {
     border-radius: 1rem;
 
     img {
-      transform: translateX(-0.2rem);
+      transform: none;
     }
   }
 }
