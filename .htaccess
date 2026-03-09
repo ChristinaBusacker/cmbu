@@ -1,6 +1,8 @@
 Options -Indexes
 RewriteEngine On
 
+php_flag display_errors 1
+
 # --- Keep existing files and folders working ---
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d

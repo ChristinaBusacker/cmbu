@@ -299,13 +299,17 @@
         $action = ($currentLang ?? 'de') === 'en' ? '/en/contact' : '/contact';
       ?>
 
-      <?php if ($formMessage !== '' && ($formType === 'success' || $formType === 'error')): ?>
-        <div class="form-feedback form-feedback--<?= htmlspecialchars($formType, ENT_QUOTES, 'UTF-8') ?>" role="status" aria-live="polite">
-          <?= htmlspecialchars($formMessage, ENT_QUOTES, 'UTF-8') ?>
-        </div>
-      <?php endif; ?>
+      <div
+        id="contact-feedback"
+        class="form-feedback <?= ($formType === 'success' || $formType === 'error') ? 'form-feedback--' . htmlspecialchars($formType, ENT_QUOTES, 'UTF-8') : '' ?>"
+        role="status"
+        aria-live="polite"
+        <?= ($formMessage === '') ? 'hidden' : '' ?>
+      >
+        <?= htmlspecialchars($formMessage, ENT_QUOTES, 'UTF-8') ?>
+      </div>
 
-      <form class="contact-form" action="<?= htmlspecialchars($action, ENT_QUOTES, 'UTF-8') ?>" method="post" novalidate>
+      <form id="contact-form" class="contact-form" action="<?= htmlspecialchars($action, ENT_QUOTES, 'UTF-8') ?>" method="post" novalidate>
         <input type="hidden" name="_csrf" value="<?= htmlspecialchars($csrfToken ?? '', ENT_QUOTES, 'UTF-8') ?>" />
 
         <!-- Honeypot (bots fill this, humans don't) -->
