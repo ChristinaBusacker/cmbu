@@ -5,7 +5,8 @@ final class App
 {
     public function __construct(
         private View $view,
-        private array $routes
+        private array $routes,
+        private ContactController $contact
     ) {}
 
     public function run(): void
@@ -18,9 +19,7 @@ final class App
             $lang = I18n::DEFAULT_LANG;
         }
 
-        if ($method !== 'GET') {
-            $this->view->notFound($lang);
-        }
+        // Allow POST routes (e.g., contact form). GET-only is handled by routes.
 
         foreach ($this->routes as $route) {
             [$m, $pattern, $viewFile] = $route;
@@ -34,6 +33,19 @@ final class App
                 $params = [];
                 foreach ($paramNames as $i => $name) {
                     $params[$name] = $matches[$i] ?? null;
+                }
+
+                // Handler routes: use a lightweight convention ("handler:...")
+                if (is_string($viewFile) && str_starts_with($viewFile, 'handler:')) {
+                    $handler = substr($viewFile, strlen('handler:'));
+
+                    if ($handler === 'contactSubmit') {
+                        $this->contact->submit($lang);
+                        return;
+                    }
+
+                    $this->view->notFound($lang);
+                    return;
                 }
 
                 $this->view->render($lang, $viewFile, $params);

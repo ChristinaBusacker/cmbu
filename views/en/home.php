@@ -289,9 +289,116 @@
 
   <div class="contact-grid">
     <section class="card" aria-labelledby="contact-form-title">
-      <h3 id="contact-form-title">Contact Form</h3>
-      <form aria-label="Contact form">
-        <!-- Contact form coming soon -->
+      <h3 id="contact-form-title">Contact form</h3>
+
+      <?php
+        $formOld = is_array($flash) && isset($flash['old']) && is_array($flash['old']) ? $flash['old'] : [];
+        $formErrors = is_array($flash) && isset($flash['errors']) && is_array($flash['errors']) ? $flash['errors'] : [];
+        $formType = is_array($flash) && isset($flash['type']) ? (string)$flash['type'] : '';
+        $formMessage = is_array($flash) && isset($flash['message']) ? (string)$flash['message'] : '';
+        $action = ($currentLang ?? 'de') === 'en' ? '/en/contact' : '/contact';
+      ?>
+
+      <?php if ($formMessage !== '' && ($formType === 'success' || $formType === 'error')): ?>
+        <div class="form-feedback form-feedback--<?= htmlspecialchars($formType, ENT_QUOTES, 'UTF-8') ?>" role="status" aria-live="polite">
+          <?= htmlspecialchars($formMessage, ENT_QUOTES, 'UTF-8') ?>
+        </div>
+      <?php endif; ?>
+
+      <form class="contact-form" action="<?= htmlspecialchars($action, ENT_QUOTES, 'UTF-8') ?>" method="post" novalidate>
+        <input type="hidden" name="_csrf" value="<?= htmlspecialchars($csrfToken ?? '', ENT_QUOTES, 'UTF-8') ?>" />
+
+        <!-- Honeypot (bots fill this, humans don't) -->
+        <div class="hp" aria-hidden="true">
+          <label for="website">Website</label>
+          <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <div class="form-row">
+          <label for="name">Name <span aria-hidden="true">*</span></label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            autocomplete="name"
+            required
+            value="<?= htmlspecialchars((string)($formOld['name'] ?? ''), ENT_QUOTES, 'UTF-8') ?>"
+            <?= isset($formErrors['name']) ? 'aria-invalid="true" aria-describedby="err-name"' : '' ?>
+          />
+          <?php if (isset($formErrors['name'])): ?>
+            <p class="field-error" id="err-name"><?= htmlspecialchars((string)$formErrors['name'], ENT_QUOTES, 'UTF-8') ?></p>
+          <?php endif; ?>
+        </div>
+
+        <div class="form-row">
+          <label for="company">Company (optional)</label>
+          <input
+            id="company"
+            name="company"
+            type="text"
+            autocomplete="organization"
+            value="<?= htmlspecialchars((string)($formOld['company'] ?? ''), ENT_QUOTES, 'UTF-8') ?>"
+          />
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email <span aria-hidden="true">*</span></label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            inputmode="email"
+            required
+            value="<?= htmlspecialchars((string)($formOld['email'] ?? ''), ENT_QUOTES, 'UTF-8') ?>"
+            <?= isset($formErrors['email']) ? 'aria-invalid="true" aria-describedby="err-email"' : '' ?>
+          />
+          <?php if (isset($formErrors['email'])): ?>
+            <p class="field-error" id="err-email"><?= htmlspecialchars((string)$formErrors['email'], ENT_QUOTES, 'UTF-8') ?></p>
+          <?php endif; ?>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message <span aria-hidden="true">*</span></label>
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            required
+            <?= isset($formErrors['message']) ? 'aria-invalid="true" aria-describedby="err-message"' : '' ?>
+          ><?= htmlspecialchars((string)($formOld['message'] ?? ''), ENT_QUOTES, 'UTF-8') ?></textarea>
+          <?php if (isset($formErrors['message'])): ?>
+            <p class="field-error" id="err-message"><?= htmlspecialchars((string)$formErrors['message'], ENT_QUOTES, 'UTF-8') ?></p>
+          <?php endif; ?>
+        </div>
+
+        <div class="form-row">
+          <div class="checkbox-row">
+            <input
+              id="consent"
+              name="consent"
+              type="checkbox"
+              value="1"
+              required
+              <?= ((string)($formOld['consent'] ?? '')) === '1' ? 'checked' : '' ?>
+              <?= isset($formErrors['consent']) ? 'aria-invalid="true" aria-describedby="err-consent"' : '' ?>
+            />
+            <label for="consent">
+              I have read the <a href="/privacy" target="_blank" rel="noopener noreferrer">privacy policy</a> and agree that my data will be processed
+              to respond to my request. <span class="req">*</span>
+            </label>
+          </div>
+          <?php if (isset($formErrors['consent'])): ?>
+            <p class="field-error" id="err-consent"><?= htmlspecialchars((string)$formErrors['consent'], ENT_QUOTES, 'UTF-8') ?></p>
+          <?php endif; ?>
+          <p class="form-hint">
+            GDPR note: I only process the data you provide to respond to your request. No sharing with third parties.
+          </p>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="button primary">Send message</button>
+        </div>
       </form>
     </section>
 

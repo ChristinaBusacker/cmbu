@@ -13,6 +13,18 @@ final class View
     {
         http_response_code($status);
 
+        // Flash messages + CSRF token live in the session.
+        // (Session is started in index.php)
+        $flash = $_SESSION['flash'] ?? null;
+        if ($flash !== null) {
+            unset($_SESSION['flash']);
+        }
+
+        if (empty($_SESSION['csrf_token']) || !is_string($_SESSION['csrf_token'])) {
+            $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+        }
+        $csrfToken = (string)$_SESSION['csrf_token'];
+
         $layoutFile = $this->viewsBasePath . '/layout.php';
         if (!is_file($layoutFile)) {
             http_response_code(500);

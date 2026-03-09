@@ -273,6 +273,108 @@ section li + li {
   min-height: 5rem;
 }
 
+.contact-form {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 0.85rem;
+}
+
+.form-row {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.contact-form label {
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(25, 21, 22, 0.14);
+  background: rgba(255, 255, 255, 0.85);
+  padding: 0.75rem 0.9rem;
+  font: inherit;
+  color: var(--text-color);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 9rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: rgba(212, 116, 121, 0.65);
+  box-shadow: 0 0 0 4px rgba(212, 116, 121, 0.16);
+}
+
+.checkbox-row {
+  display: grid;
+  grid-template-columns: 1.1rem 1fr;
+  gap: 0.65rem;
+  align-items: start;
+}
+
+.checkbox-row input {
+  margin-top: 0.15rem;
+}
+
+.req {
+  color: var(--accent-deep);
+  font-weight: 700;
+}
+
+.field-error {
+  margin: 0;
+  color: #8b2f38;
+  font-weight: 600;
+}
+
+.form-hint {
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.form-feedback {
+  margin-top: 0.85rem;
+  padding: 0.8rem 0.95rem;
+  border-radius: 0.95rem;
+  border: 1px solid rgba(25, 21, 22, 0.1);
+}
+
+.form-feedback--success {
+  background: rgba(110, 184, 126, 0.12);
+  border-color: rgba(110, 184, 126, 0.35);
+}
+
+.form-feedback--error {
+  background: rgba(212, 116, 121, 0.12);
+  border-color: rgba(212, 116, 121, 0.35);
+}
+
+/* Hide honeypot visually but keep it in the DOM */
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 address {
   font-style: normal;
 }
