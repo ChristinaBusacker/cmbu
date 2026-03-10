@@ -1,9 +1,9 @@
 <?php
-  $pageTitle = 'Privacy policy';
-  $pageDescription = 'Information about how personal data is processed on this website.';
+$pageTitle = 'Privacy policy';
+$pageDescription = 'Information about how personal data is processed on this website.';
 ?>
 
-<section aria-labelledby="privacy-title">
+<section aria-labelledby="privacy-title" class="legal">
   <h1 id="privacy-title">Privacy policy</h1>
 
   <p>
@@ -17,7 +17,8 @@
   </p>
   <ul>
     <li><strong>Purpose</strong>: responding to enquiries</li>
-    <li><strong>Legal basis</strong>: Art. 6(1)(b) GDPR (pre-contractual steps) or Art. 6(1)(f) GDPR (legitimate interest)</li>
+    <li><strong>Legal basis</strong>: Art. 6(1)(b) GDPR (pre-contractual steps) or Art. 6(1)(f) GDPR (legitimate
+      interest)</li>
     <li><strong>Recipients</strong>: no sharing with third parties; email delivery to me</li>
     <li><strong>Retention</strong>: as long as needed to handle the request and/or as required by law</li>
   </ul>

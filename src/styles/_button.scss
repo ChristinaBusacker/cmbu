@@ -50,6 +50,12 @@ a.button,
     }
   }
 
+  &[data-vt] {
+    max-width: 250px;
+    background: linear-gradient(180deg, var(--accent), var(--accent-deep));
+    color: #fff;
+  }
+
   &.github {
     padding: 8px 20px;
     display: flex;

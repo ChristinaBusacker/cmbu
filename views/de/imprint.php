@@ -1,4 +1,4 @@
-<section aria-labelledby="imprint-title">
+<section aria-labelledby="imprint-title" class="legal">
     <h1 id="imprint-title">Impressum</h1>
 
     <h2>Anbieterin</h2>

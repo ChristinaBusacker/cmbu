@@ -55,7 +55,8 @@ $pageDescription = 'Eine auflistung der Projekte der Autorin';
             </section>
         </div>
 
-        <a href="/projects/solarsystem" class="button" aria-label="Projektseite SolarSystem ansehen">
+        <a href="/projects/solarsystem" data-vt="project-solarsystem" class="button"
+            aria-label="Projektseite SolarSystem ansehen">
             Projekt ansehen
         </a>
     </article>
@@ -115,7 +116,8 @@ $pageDescription = 'Eine auflistung der Projekte der Autorin';
             </section>
         </div>
 
-        <a href="/projects/lmstudio-web" class="button" aria-label="Projektseite LMstudio-web ansehen">
+        <a href="/projects/lmstudio-web" data-vt="project-lmstudio" class="button"
+            aria-label="Projektseite LMstudio-web ansehen">
             Projekt ansehen
         </a>
     </article>

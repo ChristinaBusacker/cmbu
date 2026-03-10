@@ -3,7 +3,7 @@ $pageTitle = 'Datenschutzerklärung';
 $pageDescription = 'Informationen zur Verarbeitung personenbezogener Daten auf dieser Website.';
 ?>
 
-<section aria-labelledby="privacy-title">
+<section aria-labelledby="privacy-title" class="legal">
   <h1 id="privacy-title">Datenschutzerklärung</h1>
 
   <p>

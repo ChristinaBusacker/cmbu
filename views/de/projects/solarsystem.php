@@ -4,7 +4,8 @@ $pageDescription = 'Framework-freier Solar-System-Renderer mit Three.js + TypeSc
 $pageCanonical = '/projects/solarsystem';
 ?>
 
-<section class="project-detail" aria-labelledby="project-title" style="view-transition-name: project-solarsystem;">
+<section data-vt-target="project-solarsystem" class="project-detail" aria-labelledby="project-title"
+  style="view-transition-name: project-solarsystem;">
   <header class="project-detail__hero">
     <div class="project-detail__intro">
       <p class="project-detail__kicker">Three.js · TypeScript · WebGL</p>

@@ -1,4 +1,4 @@
-<section aria-labelledby="legal-title">
+<section aria-labelledby="legal-title" class="legal">
     <h1 id="legal-title">Legal Notice</h1>
 
     <h2>Provider</h2>

@@ -1,9 +1,8 @@
 <footer class="site-footer">
-    <div class="footer__inner">
+    <div class="footer__inner text-heading">
         <p>© <?= date('Y') ?> Christina Busacker</p>
         <nav aria-label="Footer navigation">
             <a href="/en">Home</a>
-            <a href="/en/#projects">Projects</a>
             <a href="/en/#contact">Contact</a>
             <a href="/en/imprint">Legal Notice</a>
             <a href="/en/privacy">Privacy</a>
