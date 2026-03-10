@@ -9,6 +9,7 @@
             <a href="/en/#about">About</a>
             <a href="/en/#skills">Skills</a>
             <a href="/en/#projects">Projects</a>
+            <a href="/en/cv">CV</a>
             <a href="/en/#contact">Contact</a>
         </nav>
 

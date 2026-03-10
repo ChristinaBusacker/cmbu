@@ -9,6 +9,7 @@
             <a href="/#about">Über mich</a>
             <a href="/#skills">Kompetenzen</a>
             <a href="/#projects">Projekte</a>
+            <a href="/cv">Lebenslauf</a>
             <a href="/#contact">Kontakt</a>
         </nav>
 

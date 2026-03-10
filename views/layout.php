@@ -5,7 +5,7 @@
   <?php require __DIR__ . '/partials/head.php'; ?>
 </head>
 
-<body>
+<body class="<?= htmlspecialchars($bodyClass ?? '', ENT_QUOTES, 'UTF-8') ?>">
   <?php require __DIR__ . '/' . $currentLang . '/partials/header.php'; ?>
 
   <main id="main-content">

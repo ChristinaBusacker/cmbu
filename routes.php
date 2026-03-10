@@ -4,6 +4,8 @@ declare(strict_types=1);
 return [
     ['GET', '#^/$#', 'home.php'],
 
+    ['GET', '#^/cv$#', 'cv.php'],
+
     ['GET', '#^/datenschutz$#', 'privacy.php'],
     ['GET', '#^/privacy$#', 'privacy.php'],
 
